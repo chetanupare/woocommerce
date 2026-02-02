@@ -1,0 +1,10 @@
+Fixes checkbox and radio button width in Twenty Nineteen and Twenty Seventeen themes.
+
+The CSS rule `.single-product form.cart input{width:5em}` was setting the width for ALL input types, making checkboxes and radio buttons wider than they are tall.
+
+Changes:
+- Updated CSS selector from `input` to `input[type="number"]` in twenty-nineteen.scss
+- Updated CSS selector from `input` to `input[type="number"]` in twenty-seventeen.scss
+- This ensures only quantity input fields receive the width styling
+
+Fixes #29264.
